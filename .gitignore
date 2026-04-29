@@ -1,0 +1,19 @@
+# Local environment
+.env
+*.pem
+*.key
+_新任务书信号.json
+.任务书待处理
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temp
+*.log
+__pycache__/
+*.pyc
