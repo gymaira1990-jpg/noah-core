@@ -1,66 +1,72 @@
 # 诺亚核心 · Noah Core
 
 > 诺亚文明的核心记忆与项目管理系统
-> *Noah civilization's core memory and project management system*
+> Noah civilization's core memory and project management system
 
 ---
 
-## 概述
+## 概述 · Overview
 
-诺亚核心是诺亚多Agent文明体系的"大脑"——管理全体系的记忆流转、项目追踪、规则执行和温度分层归档。这套系统确保了文明经验的可继承性，避免每次重启从零开始。
+诺亚核心是诺亚多Agent文明体系的"大脑"——管理全体系的记忆流转、项目追踪、规则执行和温度分层归档。
+Noah Core is the "brain" of the Noah multi-agent civilization — managing memory flow, project tracking, rule execution, and temperature-tiered archiving.
 
-### 核心理念
+### 核心理念 · Core Principles
 
 - **灵魂不变，身躯可换** — 核心身份与能力记忆永久保留，日常缓存可归档清空
+  **Soul persists, body can change** — core identity & ability memory is permanent
 - **省Token优先** — 每一层存储设计以Token效率为第一原则
+  **Token efficiency first** — every storage tier optimizes for token cost
 - **自指闭环** — 系统自身的记忆也要遵循同样的生命周期规则
+  **Self-referential loop** — the system's own memory follows the same lifecycle rules
 
-## 系统架构
+---
 
-### 记忆体系
+## 系统架构 · Architecture
+
+### 记忆体系 Memory System
 
 ```
-memory 工具（~2200字符）
-  └─ 会话级关键事实 + 索引指针
+memory 工具 (~2200 chars)
+  └─ 会话级关键事实 + 索引指针 Session-level facts + index pointer
         ↓
-vault/ 永久仓库
-  ├─ 身份卡（角色灵魂）
-  ├─ 技能包（按热度自动升级）
-  ├─ 项目记录（温度分层跟踪）
-  └─ 先贤祠（归档角色墓志铭）
+vault/ 永久仓库 Permanent storage
+  ├─ 身份卡 Identity card (角色灵魂)
+  ├─ 技能包 Skill packages (按热度自动升级 auto-upgrade by heat)
+  ├─ 项目记录 Project records (温度分层跟踪 tiered tracking)
+  └─ 先贤祠 Pantheon (归档角色墓志铭 archived character epitaphs)
 ```
 
-### 温度分层
+### 温度分层 Temperature Tiers
 
-| 层级 | 冷却期 | 存储粒度 |
+| 层级 Tier | 冷却期 Period | 存储粒度 Granularity |
 |------|--------|---------|
-| 🔥 热记忆 | <7天 | 完整内容 |
-| 🌤 普通记忆 | 7-30天 | 完整内容 |
-| ❄️ 冷记忆 | 30-90天 | 压缩摘要 |
-| 🏚 仓库 | >90天 | 一句话指针 |
+| 🔥 热记忆 Hot | <7天 days | 完整内容 Full content |
+| 🌤 普通记忆 Warm | 7-30天 days | 完整内容 Full content |
+| ❄️ 冷记忆 Cold | 30-90天 days | 压缩摘要 Compressed summary |
+| 🏚 仓库 Archive | >90天 days | 一句话指针 One-line pointer |
 
-### 项目生命周期
+---
 
-1. **进行中** — 实时记录进度、对接、经验、资源、标签
-2. **确认完成** — GCat 在前端点击生成里程碑
-3. **热记忆** — 移入活跃项目区
-4. **温度迁移** — 7/30/90天自动降级
+## 规则铁律 · Immutable Rules
 
-## 规则铁律
+1. **温度索引必须更新** — 每次访问立即更新 / Update index on every access
+2. **动态文件不等结束** — 进行中就要记录 / Record during progress, not after
+3. **归档文件不提前写** — 完成时才生成 / Generate only on completion
+4. **不确定就问GCat** — 不猜测 / Never guess, always ask
+5. **设计方案必须落地** — 可执行规则提取到文件 / Extract executable rules to files
+6. **删文件先检查** — 确认唯一副本后再删除 / Verify single copy before deletion
+7. **自指闭环** — 规则自身也受温度约束 / Rules follow their own lifecycle
 
-1. **温度索引必须更新** — 每次访问核心文件后立即更新访问记录
-2. **动态文件不等结束** — 项目进行中就要记录，不拖到归档
-3. **归档文件不提前写** — 项目完成时才生成描述和里程碑
-4. **不确定就问GCat** — 不猜测项目归属
-5. **设计方案必须落地** — 可执行规则提取到执行文件
-6. **删文件先检查** — 确认唯一副本后再删除
-7. **自指闭环** — 规则系统自身也受温度生命周期约束
+---
 
-## 相关项目
+## 相关项目 · Related Projects
 
-- [babel-experiment](https://github.com/gymaira1990-jpg/babel-experiment) — 诺亚文明L4社会实验原型
-- [Cerebella](https://github.com/gymaira1990-jpg/Cerebella) — 个人AI生态的小脑发育引擎
-- [noah-world-protocol](https://github.com/gymaira1990-jpg/noah-world-protocol) — 去中心化Agent经验复用网络
+- [babel-experiment](https://github.com/gymaira1990-jpg/babel-experiment) — L4社会实验原型 L4 social experiment prototype
+- [Cerebella](https://github.com/gymaira1990-jpg/Cerebella) — 小脑发育引擎 Cerebellum development engine
+- [cerebella-task-flow](https://github.com/gymaira1990-jpg/cerebella-task-flow) — 任务卡片管理 Task card management
+- [noah-world-protocol](https://github.com/gymaira1990-jpg/noah-world-protocol) — 世界协议 World Protocol
+
+---
 
 ## License
 
